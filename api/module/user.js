@@ -10,6 +10,7 @@ const modeUrl = 'user';
 module.exports = {
 	loginSms: data => request.get(modeUrl + '/login/loginSms', data), // 短信验证码登录
 	loginWx: data => request.get(modeUrl + '/appletUser/loginWx', data), // 微信登录登录
+	checkToken: data => request.get(modeUrl + '/appletUser/checkToken', data), // 检查token是否有效
 	getProductList: data => request.get(modeUrl + '/product/getProductList', data), // 获取产品列表
 	productGet: data => request.get(modeUrl + '/product/get', data), // 产品详情
 

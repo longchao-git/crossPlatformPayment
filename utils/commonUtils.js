@@ -130,6 +130,7 @@ function getUrlBase64(url, width = -1, height = -1) {
 
 
 module.exports = {
+    antiShake,
     throttle,
     trimSpace,
     getUrlParamsToObject,

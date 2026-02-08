@@ -71,18 +71,15 @@
 					code: this.code,
 				}).then(res => {
 					uni.setStorageSync('token', res.token)
+					uni.setStorageSync('userInfo', res)
 					if (!res.userName || !res.headImg) {
-						res.userId
 						uni.navigateTo({
-							url: '/pages/login/codeLogin?userId=' + 1
+							url: '/pages/login/codeLogin?userId=' + res.userId
 						})
 					} else {
-						common.getUserDetail({
-							id: res.userId
-						}).then(res => {
-							let userInfo = uni.getStorageSync('userInfo')
+						uni.switchTab({
+							url: '/pages/tabbar/home/home'
 						})
-
 					}
 				})
 

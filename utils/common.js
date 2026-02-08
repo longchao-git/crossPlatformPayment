@@ -32,7 +32,7 @@ const commonData = {
 							uni.hideLoading()
 						})
 					} else {
-						wx.showToast({
+						uni.showToast({
 							title: '上传视频不能大于150M!',
 							icon: 'none'
 						})
@@ -104,7 +104,7 @@ const commonData = {
 				let fileName = new Date().getTime() + Math.floor(Math.random() * 150) + fType;
 				fPath = fPath + fileName;
 				uni.uploadFile({
-					url: dataUpload.ossPrefix,
+					url: res.ossPrefix,
 					formData: {
 						'Filename': fileName,
 						'Content-Disposition': 'filename=' +

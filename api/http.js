@@ -32,7 +32,6 @@ function http({url, data, method = 'GET'}) {
 					if(parseInt(code) === 1007) {
 						uni.clearStorageSync("loginUserInfo");
 						uni.clearStorageSync("token");
-						return
 						uni.showModal({
 							title: '提示',
 							content: '登录状态失效请重新登录',
@@ -40,12 +39,12 @@ function http({url, data, method = 'GET'}) {
 							success:  (res) => {
 								if (res.confirm) {
 									uni.navigateTo({
-										url:'/pages/login/login/login'
+										url:'/pages/login/login'
 									})
 								} 
 							}
 						})
-					 
+						return;
 					} else {
 						_isLoad = 0
 						uni.showToast({

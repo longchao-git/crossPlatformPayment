@@ -1,4 +1,6 @@
 <script>
+	import api from '@/api/api.js'
+	
 	export default {
 		onLaunch: function() {},
 		onShow: function() {

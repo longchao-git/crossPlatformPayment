@@ -27,7 +27,7 @@ function validationPhone(value) {
  */
 function validationEmail(value) {
     // 创建正则
-    const reg = /^[A-Za-z0-9u4e00-u9fa5]+@[a-zA-Z0-9_-]+(.[a-zA-Z0-9_-]+)+$/;
+    const reg = /^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
     return reg.test(value.toString());
 }
 
